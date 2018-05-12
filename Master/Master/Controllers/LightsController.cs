@@ -15,7 +15,6 @@ namespace Master.Controllers
         [HttpGet("{mode}")]
         public void Get(Power mode)
         {
-
             var client = new RestClient($"http://{ArduinoIp}");
             var request = new RestRequest($"power{mode}", Method.GET);
 
