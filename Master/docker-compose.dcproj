@@ -5,7 +5,7 @@
     <DockerTargetOS>Linux</DockerTargetOS>
     <ProjectGuid>32f8ccf5-2a35-4c1e-a411-3202e74b16ca</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/api/values</DockerServiceUrl>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/api/ping</DockerServiceUrl>
     <DockerServiceName>master</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
