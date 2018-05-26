@@ -11,9 +11,9 @@ WORKDIR /src/Master
 RUN dotnet build Master.csproj -c Release -o /app
 
 FROM build AS publish
-RUN dotnet publish Master.csproj -c Release -o /app
+RUN dotnet publish Master.csproj -c Release -o /app  linux-arm
 
-FROM base AS final
+FROM microsoft/dotnet:2.0-runtime-stretch-arm32v7 AS runtime
 WORKDIR /app
 COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "Master.dll"]
